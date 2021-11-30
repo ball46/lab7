@@ -1,5 +1,4 @@
 #include<iostream>
-
 using namespace std;
 
 int main(){
@@ -10,5 +9,25 @@ int main(){
 		i++;
 	}
 	
+	cout << "Please input k: ";
+	cin >> k;
+	if(k > 0){
+		i = 0;
+		result = 0;
+	}else{
+		cout << "Invalid input!!!";
+		return 0 ;
+	}
+
+	while(i < 5000){
+		if(P[i] % k == 0){
+			result = result - P[i];
+		}else{
+			result = result + P[i];
+		}
+		i++;
+	
+	}
+	cout << "Result = " << result;
 	return 0;
 }
