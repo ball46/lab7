@@ -4,7 +4,8 @@
 using namespace std;
 
 string func1(string x){
-	int i = 0, L = x.size();
+	int i = 0 ;
+	int L = x.size();
 	string y = "";
 	while(i < L){
 		y += x[L-i-1];
@@ -14,7 +15,8 @@ string func1(string x){
 }
 
 string func2(string x){
-	int i = 0, L = x.size();
+	int i = 0;
+	int L = x.size();
 	string y = "";
 	while(i < L){
 		y += toupper(x[i]);
@@ -24,7 +26,8 @@ string func2(string x){
 }
 
 string func3(string x){
-	int i = 0, L = x.size();
+	int i = 0;
+	int L = x.size();
 	string y = "";
 	while(i < L){
 		y += tolower(x[i]);
@@ -34,8 +37,24 @@ string func3(string x){
 }
 
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+	string a;
+    cout << "Input text: ";
+	cin >> a;
+
+	string b = func1(a);
+	cout << "Reversed text: " << b << "\n";
+
+	string c = func2(a);
+	string d = func2(b);
+
+    cout << "Palindrome: " ;
+
+	if(c == d){
+		cout <<"Yes";
+	}else{
+		cout << "No";
+	}
+
+	
     return 0;
 }
